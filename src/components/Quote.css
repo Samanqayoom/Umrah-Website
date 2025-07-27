@@ -1,0 +1,77 @@
+/* Whole section background remains white */
+.quote-section {
+  background: transparent; /* ya white rakhna hai to #fff */
+  padding: 0 2rem 3rem 2rem;
+  text-align: center;
+  margin-top: -15px; /* zyada negative value to pull it upwards */
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Green background only on the form box */
+.quote-box {
+  background:#0e524b;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+  
+}
+
+.quote-box h2 {
+  font-size: 2rem;
+}
+
+.quote-box p {
+  margin-top: 0.5rem;
+}
+
+/* Horizontal inputs layout */
+.quote-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Input field styling */
+.quote-form input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 180px;
+}
+
+/* Button styling */
+.quote-form button {
+  background-color: #f1c40f;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quote-form button:hover {
+  background-color: #d4ac0d;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .quote-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote-form input,
+  .quote-form button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

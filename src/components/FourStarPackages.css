@@ -1,0 +1,103 @@
+.three-star-section {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.three-star-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.package-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.package-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 250px;
+}
+
+.package-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.package-card h3 {
+  color: #8a6d1f;
+  margin: 1rem 0 0.5rem;
+}
+
+.hotel-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.hotel-info div {
+  text-align: center;
+}
+
+.hotel-info img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.3rem;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.price {
+  background: #333;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: #777;
+}
+
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.call-btn,
+.whatsapp-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.call-btn {
+  background-color: #333;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
