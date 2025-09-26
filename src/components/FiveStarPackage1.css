@@ -46,7 +46,7 @@
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
   .package-row {
-    flex-direction: column; /* Image top, details below */
+    flex-direction: row; /* Image top, details below */
     
   }
 
