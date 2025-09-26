@@ -1,23 +1,22 @@
 /* Whole section background remains white */
 .quote-section {
-  background: transparent; /* ya white rakhna hai to #fff */
+  background: transparent;
   padding: 0 2rem 3rem 2rem;
   text-align: center;
-  margin-top: -15px; /* zyada negative value to pull it upwards */
+  margin-top: -15px;
   position: relative;
   z-index: 2;
 }
 
-
 /* Green background only on the form box */
 .quote-box {
-  background:#0e524b;
+  background: #0e524b;
   color: white;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 10px;
-  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .quote-box h2 {
@@ -31,19 +30,19 @@
 /* Horizontal inputs layout */
 .quote-form {
   margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* better alignment */
   gap: 1rem;
 }
 
 /* Input field styling */
 .quote-form input {
-  padding: 0.8rem;
+  padding: 0.9rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
-  width: 180px;
+  width: 100%;   /* full responsive width */
+  box-sizing: border-box;
 }
 
 /* Button styling */
@@ -52,10 +51,11 @@
   color: #000;
   font-weight: bold;
   border: none;
-  padding: 0.9rem;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: auto; /* button bhi inputs ke sath inline rahe */
 }
 
 .quote-form button:hover {
@@ -65,13 +65,10 @@
 /* Responsive layout for small screens */
 @media (max-width: 768px) {
   .quote-form {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* stack all inputs */
   }
 
-  .quote-form input,
   .quote-form button {
-    width: 100%;
-    max-width: 300px;
+    width: 100%; /* mobile pe full width button */
   }
 }

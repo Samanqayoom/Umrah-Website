@@ -1,0 +1,107 @@
+.about-us-page {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e6f7f5, #fdfdfd);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-us-page h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+  font-weight: 700;
+}
+
+.highlight {
+  color:#048b87;
+  font-weight: bold;
+}
+
+.intro {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 auto 40px;
+  text-align: center;
+  max-width: 800px;
+  color: #555;
+}
+
+/* Section Styling */
+.about-content section {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.about-content h2 {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Features List */
+.features-list {
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.features-list li {
+  font-size: 17px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #444;
+  transition: transform 0.2s ease;
+}
+
+.features-list li:hover {
+  transform: translateX(5px);
+}
+
+/* Icon Colors */
+.vision-icon { color: #0077b6; }
+.why-icon { color: #009688; }
+.staff { color: #6a4c93; }
+.price { color: #2a9d8f; }
+.support { color: #e76f51; }
+.mosque { color: #f4a261; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-us-page {
+    padding: 30px 15px;
+  }
+
+  .about-us-page h1 {
+    font-size: 30px;
+  }
+
+  .about-content h2 {
+    font-size: 22px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .features-list li {
+    font-size: 16px;
+  }
+}

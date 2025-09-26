@@ -47,9 +47,10 @@
   text-align: center;
 }
 
-.hotel-info img {
-  width: 24px;
-  height: 24px;
+.hotel-info i {
+  font-size: 1.2rem;
+  color: #0e524b; /* green shade */
+  display: block;
   margin-bottom: 0.3rem;
 }
 
@@ -60,7 +61,7 @@
 
 .price {
   background: #333;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 0.7rem;
   margin-top: 1rem;
@@ -74,7 +75,6 @@
   color: #777;
 }
 
-
 .contact-buttons {
   display: flex;
   justify-content: center;
@@ -84,7 +84,9 @@
 
 .call-btn,
 .whatsapp-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* icon aur text ke beech space */
   padding: 0.5rem 1rem;
   border-radius: 5px;
   color: white;
@@ -99,4 +101,9 @@
 
 .whatsapp-btn {
   background-color: #25D366;
+}
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }

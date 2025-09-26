@@ -5,17 +5,35 @@
   font-family: Arial, sans-serif;
 }
 
+
 .footer-top {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .footer-brand h2 {
-  font-size: 24px;
-  color: #facc15;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-brand i {
+  margin-right: 8px;
+  color: #ffd700; /* Golden mosque icon */
+}
+
+.footer p i {
+  margin-right: 8px;
+  color: #ccc;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .footer-links ul {
@@ -24,17 +42,39 @@
 }
 
 .footer-links li {
-  margin: 8px 0;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-.footer-social p {
-  margin: 6px 0;
+.footer-links li:hover {
+  color: #ffd700;
 }
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 26px;
+}
+
+.social-icons a {
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Brand Colors */
+.facebook i { color: #1877f2; }   /* Facebook Blue */
+.instagram i { color: #e1306c; }  /* Instagram Pink */
+.whatsapp i { color: #25d366; }   /* WhatsApp Green */
+.youtube i { color: #ff0000; }    /* YouTube Red */
 
 .footer-bottom {
-  border-top: 1px solid #374151;
+  border-top: 1px solid #333;
   padding-top: 15px;
   text-align: center;
   font-size: 14px;
-  color: #9ca3af;
+  color: #bbb;
 }

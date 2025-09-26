@@ -1,57 +1,65 @@
 .why-section {
-  padding: 60px 20px;
-  background-color: #ffffff;
+  padding: 50px 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  background: #f9f9f9;
 }
 
 .why-section h2 {
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 10px;
-  color: #1e293b;
 }
 
 .why-intro {
   max-width: 700px;
   margin: 0 auto 40px;
-  color: #4b5563;
+  color: #555;
   font-size: 16px;
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ Two columns per row */
-  gap: 40px; /* ✅ Wide gap between cards */
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .why-grid {
-    grid-template-columns: 1fr; /* ✅ Single column on mobile */
-  }
+  max-width: 1500px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
 .why-card {
-  background-color: #f9fafb;
+  background: #fff;
   border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-  text-align: left;
-  transition: transform 0.3s ease;
+  padding: 25px 20px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
 }
 
 .why-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
+
+.why-icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: #0066cc; /* default icon color */
+}
+
+/* Individual icon colors */
+.why-card:nth-child(1) .why-icon { color: #28a745; }  /* Trusted = green */
+.why-card:nth-child(2) .why-icon { color: #f39c12; }  /* Affordable = gold */
+.why-card:nth-child(3) .why-icon { color: #007bff; }  /* Support = blue */
+.why-card:nth-child(4) .why-icon { color: #17a2b8; }  /* Services = teal */
+.why-card:nth-child(5) .why-icon { color: #8e44ad; }  /* Team = purple */
 
 .why-card h3 {
   font-size: 20px;
-  color: #111827;
   margin-bottom: 10px;
 }
 
 .why-card p {
-  font-size: 15px;
-  color: #374151;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
 }

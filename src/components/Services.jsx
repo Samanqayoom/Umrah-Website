@@ -3,24 +3,28 @@ import "./Services.css";
 
 const servicesData = [
   {
-    title: "Health Services 🏥",
+    title: "Health Services",
     description:
-      "We ensure your health and safety during the journey with 24/7 medical support, hygiene guidance, and emergency assistance."
+      "We ensure your health and safety during the journey with 24/7 medical support, hygiene guidance, and emergency assistance.",
+    icon: <i className="fas fa-hospital-symbol service-icon health-icon"></i>
   },
   {
-    title: "Transport Services 🚐",
+    title: "Transport Services",
     description:
-      "Comfortable and timely transport to and from all holy sites with air-conditioned vehicles and reliable drivers."
+      "Comfortable and timely transport to and from all holy sites with air-conditioned vehicles and reliable drivers.",
+    icon: <i className="fas fa-shuttle-van service-icon transport-icon"></i>
   },
   {
-    title: "Visa Assistance 🛂",
+    title: "Visa Assistance",
     description:
-      "Our experts handle your Umrah visa process smoothly and efficiently with complete documentation support."
+      "Our experts handle your Umrah visa process smoothly and efficiently with complete documentation support.",
+    icon: <i className="fas fa-passport service-icon visa-icon"></i>
   },
   {
-    title: "Ziyarat Tours 🕌",
+    title: "Ziyarat Tours",
     description:
-      "Guided visits to sacred historical sites in Makkah and Madina for a spiritually uplifting experience."
+      "Guided visits to sacred historical sites in Makkah and Madina for a spiritually uplifting experience.",
+    icon: <i className="fas fa-mosque service-icon ziyarat-icon"></i>
   }
 ];
 
@@ -37,6 +41,7 @@ const Services = () => {
       <div className="services-grid">
         {servicesData.map((service, index) => (
           <div className="service-card" key={index}>
+            {service.icon}
             <h3>{service.title}</h3>
             <p>{service.description}</p>
           </div>

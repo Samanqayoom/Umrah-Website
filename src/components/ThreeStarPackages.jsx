@@ -61,35 +61,43 @@ const ThreeStarPackages = () => {
           <div className="package-card" key={pkg.id}>
             <img src={pkg.image} alt={pkg.nights} />
             <h3>{pkg.nights} {pkg.star} Umrah Package</h3>
+            
             <div className="hotel-info">
               <div>
-                <img src="/makkah-icon.png" alt="Makkah" />
-                <p>🕋Makkah({pkg.makkahNights})</p>
+                <i className="fa-solid fa-kaaba icon"></i>
+                <p>Makkah ({pkg.makkahNights})</p>
                 <span>{pkg.makkahHotel}</span>
               </div>
               <div>
-                <img src="/madinah-icon.png" alt="Madinah" />
-                <p>🕌Madinah({pkg.madinahNights})</p>
+                <i className="fa-solid fa-mosque icon"></i>
+                <p>Madinah ({pkg.madinahNights})</p>
                 <span>{pkg.madinahHotel}</span>
               </div>
             </div>
-            <div className="stars">⭐⭐⭐</div>
+
+            <div class="stars">
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-star"></i>
+</div>
+
             <div className="price">{pkg.price}</div>
             
             <p className="disclaimer">All packages are subject to availability.</p>
 
             <div className="contact-buttons">
-              <a href="tel:+920123456789" className="call-btn">📞 Call Us</a>
+              <a href="tel:07465683556" className="call-btn">
+                <i className="fa-solid fa-phone"></i> Call Us
+              </a>
               <a
-                href="https://wa.me/920123456789"
+                href="https://wa.me/07465683556"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-btn"
               >
-                💬 WhatsApp
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp
               </a>
             </div>
-
           </div>
         ))}
       </div>
