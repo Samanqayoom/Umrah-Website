@@ -1,47 +1,47 @@
-/* Whole section background remains white */
+/* ===== Quote Section ===== */
 .quote-section {
   background: transparent;
-  padding: 0 2rem 3rem 2rem;
+  padding: 0 1rem 2rem 1rem; /* mobile friendly padding */
   text-align: center;
   margin-top: -15px;
   position: relative;
   z-index: 2;
 }
 
-/* Green background only on the form box */
+/* Green box */
 .quote-box {
   background: #0e524b;
   color: white;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem; /* slightly smaller padding for mobile */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .quote-box h2 {
-  font-size: 2rem;
+  font-size: 1.8rem; /* smaller on mobile */
 }
 
 .quote-box p {
   margin-top: 0.5rem;
+  font-size: 0.9rem; /* slightly smaller text */
 }
 
-/* Horizontal inputs layout */
+/* Form layout */
 .quote-form {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* better alignment */
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller fields on mobile */
+  gap: 0.8rem;
 }
 
-/* Input field styling */
+/* Input styling */
 .quote-form input {
-  padding: 0.9rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 100%;   /* full responsive width */
+  padding: 0.7rem; /* smaller padding */
+  font-size: 0.9rem; /* smaller text */
+  border-radius: 5px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -51,24 +51,45 @@
   color: #000;
   font-weight: bold;
   border: none;
-  padding: 1rem;
-  border-radius: 6px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
-  width: auto; /* button bhi inputs ke sath inline rahe */
+  width: auto;
 }
 
 .quote-form button:hover {
   background-color: #d4ac0d;
 }
 
-/* Responsive layout for small screens */
+/* ===== Mobile responsiveness ===== */
 @media (max-width: 768px) {
+  .quote-box {
+    padding: 1rem; /* even smaller padding for mobile */
+  }
+
+  .quote-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .quote-box p {
+    font-size: 0.85rem;
+  }
+
   .quote-form {
-    grid-template-columns: 1fr; /* stack all inputs */
+    grid-template-columns: 1fr; /* stack inputs vertically */
+    gap: 0.6rem; /* tighter gap */
+  }
+
+  .quote-form input {
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
 
   .quote-form button {
-    width: 100%; /* mobile pe full width button */
+    width: 100%; /* full width button */
+    padding: 0.7rem;
+    font-size: 0.85rem;
   }
 }
