@@ -75,18 +75,38 @@
   line-height: 1.5;
 }
 
-/* ✅ Mobile Responsive (1 column on small screens) */
+/* Mobile Responsive for Services Section */
 @media (max-width: 768px) {
   .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr; /* single column layout */
+    gap: 20px; /* thoda gap kam */
+    padding: 0 10px; /* sides pe thoda padding */
   }
 
   .services-section h2 {
-    font-size: 24px;
+    font-size: 24px; /* heading chhoti ho jaaye */
+  }
+
+  .services-section .intro {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    padding: 20px; /* thoda chhota padding */
   }
 
   .service-icon {
-    font-size: 28px;
+    font-size: 28px; /* icons thode chhote */
+    margin-bottom: 10px;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .service-card p {
+    font-size: 13px;
   }
 }

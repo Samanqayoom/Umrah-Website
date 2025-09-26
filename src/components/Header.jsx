@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
   return (
     <header className="header">
+      {/* Top bar */}
       <div className="top-bar">
         <div className="logo">
           <i className="fas fa-kaaba"></i> Muqqadas Travels
@@ -20,22 +26,43 @@ const Header = () => {
           </span>
         </div>
       </div>
-      <nav className="navbar">
-        <a onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>HOME</a>
-          <div className="dropdown">
-      <a>
-  UMRAH PACKAGES <i className="fa-solid fa-chevron-down"></i>
-</a>
 
-    <div className="dropdown-content">
-      <a onClick={() => navigate('/packages/3star')}>3 Star Packages</a>
-      <a onClick={() => navigate('/packages/4star')}>4 Star Packages</a>
-      <a onClick={() => navigate('/packages/5star')}>5 Star Packages</a>
-    </div>
-  </div>
+      {/* Desktop Navbar */}
+      <nav className="navbar desktop-menu">
+        <a onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>HOME</a>
+        <div className="dropdown">
+          <a>
+            UMRAH PACKAGES <i className="fas fa-chevron-down"></i>
+          </a>
+          <div className="dropdown-content">
+            <a onClick={() => navigate('/packages/3star')}>3 Star Packages</a>
+            <a onClick={() => navigate('/packages/4star')}>4 Star Packages</a>
+            <a onClick={() => navigate('/packages/5star')}>5 Star Packages</a>
+          </div>
+        </div>
         <a onClick={() => navigate('/about')} style={{ cursor: 'pointer' }}>ABOUT US</a>
         <a onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>CONTACT US</a>
       </nav>
+
+      {/* Mobile Navbar Toggle */}
+      <div className="mobile-menu-icon" onClick={toggleSidebar}>
+        <i className={sidebarOpen ? "fas fa-times" : "fas fa-bars"}></i>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <a onClick={() => { navigate('/'); toggleSidebar(); }}>HOME</a>
+        <div className="dropdown-mobile">
+          <a>UMRAH PACKAGES</a>
+          <div className="dropdown-content-mobile">
+            <a onClick={() => { navigate('/packages/3star'); toggleSidebar(); }}>3 Star Packages</a>
+            <a onClick={() => { navigate('/packages/4star'); toggleSidebar(); }}>4 Star Packages</a>
+            <a onClick={() => { navigate('/packages/5star'); toggleSidebar(); }}>5 Star Packages</a>
+          </div>
+        </div>
+        <a onClick={() => { navigate('/about'); toggleSidebar(); }}>ABOUT US</a>
+        <a onClick={() => { navigate('/contact'); toggleSidebar(); }}>CONTACT US</a>
+      </div>
     </header>
   );
 };
