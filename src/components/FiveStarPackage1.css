@@ -47,7 +47,7 @@
 @media (max-width: 768px) {
   .package-row {
     flex-direction: column; /* Image top, details below */
-    text-align: center;
+    
   }
 
   .package-image {
