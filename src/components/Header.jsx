@@ -5,16 +5,15 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [packagesOpen, setPackagesOpen] = useState(false); // Mobile dropdown toggle
+  const [packagesOpen, setPackagesOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
-    setPackagesOpen(false); // close packages when sidebar closes
+    if (sidebarOpen) setPackagesOpen(false);
   };
 
   return (
     <header className="header">
-      {/* Top bar */}
       <div className="top-bar">
         <div className="logo">
           <i className="fas fa-kaaba"></i> Muqqadas Travels
@@ -46,10 +45,13 @@ const Header = () => {
         <a onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>CONTACT US</a>
       </nav>
 
-      {/* Mobile Navbar Toggle */}
+      {/* Mobile Burger Icon */}
       <div className="mobile-menu-icon" onClick={toggleSidebar}>
         <i className={sidebarOpen ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
+
+      {/* Overlay */}
+      <div className={`mobile-sidebar-overlay ${sidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}></div>
 
       {/* Mobile Sidebar */}
       <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
@@ -57,7 +59,7 @@ const Header = () => {
 
         <div className="dropdown-mobile">
           <a onClick={() => setPackagesOpen(!packagesOpen)}>
-            UMRAH PACKAGES <i className="fas fa-chevron-down"></i>
+            UMRAH PACKAGES <i className={`fas fa-chevron-down ${packagesOpen ? 'rotate' : ''}`}></i>
           </a>
           {packagesOpen && (
             <div className="dropdown-content-mobile">
