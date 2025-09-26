@@ -112,7 +112,7 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  z-index: 99;
+  z-index: 101;
 }
 
 .mobile-sidebar-overlay.open {
@@ -124,7 +124,7 @@
 .mobile-sidebar {
   position: fixed;
   top: 0;
-  right: -260px; /* hidden initially */
+  right: -100%; /* hide completely offscreen */
   width: 260px;
   height: 100%;
   background: #048b87;
