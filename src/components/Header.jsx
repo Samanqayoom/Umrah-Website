@@ -5,9 +5,11 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [packagesOpen, setPackagesOpen] = useState(false); // Mobile dropdown toggle
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+    setPackagesOpen(false); // close packages when sidebar closes
   };
 
   return (
@@ -52,14 +54,20 @@ const Header = () => {
       {/* Mobile Sidebar */}
       <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
         <a onClick={() => { navigate('/'); toggleSidebar(); }}>HOME</a>
+
         <div className="dropdown-mobile">
-          <a>UMRAH PACKAGES</a>
-          <div className="dropdown-content-mobile">
-            <a onClick={() => { navigate('/packages/3star'); toggleSidebar(); }}>3 Star Packages</a>
-            <a onClick={() => { navigate('/packages/4star'); toggleSidebar(); }}>4 Star Packages</a>
-            <a onClick={() => { navigate('/packages/5star'); toggleSidebar(); }}>5 Star Packages</a>
-          </div>
+          <a onClick={() => setPackagesOpen(!packagesOpen)}>
+            UMRAH PACKAGES <i className="fas fa-chevron-down"></i>
+          </a>
+          {packagesOpen && (
+            <div className="dropdown-content-mobile">
+              <a onClick={() => { navigate('/packages/3star'); toggleSidebar(); }}>3 Star Packages</a>
+              <a onClick={() => { navigate('/packages/4star'); toggleSidebar(); }}>4 Star Packages</a>
+              <a onClick={() => { navigate('/packages/5star'); toggleSidebar(); }}>5 Star Packages</a>
+            </div>
+          )}
         </div>
+
         <a onClick={() => { navigate('/about'); toggleSidebar(); }}>ABOUT US</a>
         <a onClick={() => { navigate('/contact'); toggleSidebar(); }}>CONTACT US</a>
       </div>

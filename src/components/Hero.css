@@ -1,27 +1,19 @@
-
+/* Desktop - normal show */
 .hero-section {
   width: 100%;
   text-align: center;
-  margin-top: 0; /* agar header ke baad spacing chahiye to adjust karen */
+  margin-top: 0;
 }
 
 .full-poster {
   width: 100%;
-  height: auto; /* maintain aspect ratio */
+  height: auto;
   display: block;
 }
 
-/* ===== Media Queries ===== */
+/* Mobile - hide poster */
 @media (max-width: 768px) {
   .full-poster {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .full-poster {
-    width: 100%;
-    height: auto;
+    display: none; /* hide on tablets and mobiles */
   }
 }
