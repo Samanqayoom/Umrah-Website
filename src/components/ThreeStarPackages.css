@@ -143,6 +143,8 @@
   }
 
   .price {
+     width: 100%; /* buttons full width on mobile */
+    justify-content: center;
     font-size: 1rem; /* price ka size adjust */
     padding: 0.5rem;
   }
