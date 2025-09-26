@@ -9,7 +9,7 @@ const Header = () => {
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
-    if (sidebarOpen) setPackagesOpen(false);
+    if (!sidebarOpen) setPackagesOpen(false); // reset dropdown when closing
   };
 
   return (
@@ -18,6 +18,8 @@ const Header = () => {
         <div className="logo">
           <i className="fas fa-kaaba"></i> Muqqadas Travels
         </div>
+
+        {/* Contact info hidden on mobile */}
         <div className="contact-info">
           <span>
             <i className="fas fa-phone-alt"></i> 020 38219 282
@@ -25,6 +27,11 @@ const Header = () => {
           <span>
             <i className="fas fa-envelope"></i> umrah@muqaddastravels.com
           </span>
+        </div>
+
+        {/* Mobile burger */}
+        <div className="mobile-menu-icon" onClick={toggleSidebar}>
+          <i className={sidebarOpen ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
       </div>
 
@@ -45,13 +52,11 @@ const Header = () => {
         <a onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>CONTACT US</a>
       </nav>
 
-      {/* Mobile Burger Icon */}
-      <div className="mobile-menu-icon" onClick={toggleSidebar}>
-        <i className={sidebarOpen ? "fas fa-times" : "fas fa-bars"}></i>
-      </div>
-
       {/* Overlay */}
-      <div className={`mobile-sidebar-overlay ${sidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}></div>
+      <div
+        className={`mobile-sidebar-overlay ${sidebarOpen ? 'open' : ''}`}
+        onClick={toggleSidebar}
+      ></div>
 
       {/* Mobile Sidebar */}
       <div className={`mobile-sidebar ${sidebarOpen ? 'open' : ''}`}>
