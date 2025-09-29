@@ -1,16 +1,16 @@
 import React from 'react';
 import './FiveStarPackage3.css';
-import kabah from '../assets/4.jpg';
-import greenDoor from '../assets/madina.jpg';
-import haramNight from '../assets/madinah.jpg';
-import masjidFront from '../assets/kaaba.jpg';
+import kabah from '../assets/VmJ5v-tC.jpg';
+import greenDoor from '../assets/smJOZbHm.jpg';
+import haramNight from '../assets/View of masjid nabawi from my room @ oberoi hotel.jpg';
+import masjidFront from '../assets/يوفر فندق سويس المقام اطلاله مميزه.jpg';
 
 const packages = [
   {
     id: 1,
     title: '3 Star Umrah Package - 7 Nights',
     description: [
-      'Total Stay: 7 Nights',
+      'Total Stay: 6 Nights',
       'Makkah: 4 Nights at Emaar Al Khalil Hotel',
       'Madinah: 3 Nights at Zaha Al Madinah Hotel',
       'Clean & Comfortable Rooms',
@@ -18,7 +18,7 @@ const packages = [
       'Daily Breakfast Included',
       'All Transport & Ziyarat Arranged',
       'Assistance from Local Guides',
-      'Price: £899'
+      'Price: £700'
     ],
     image: kabah,
   },
@@ -34,7 +34,7 @@ const packages = [
       'Daily Breakfast Included',
       'All Transport & Ziyarat Arranged',
       'Assistance from Local Guides',
-      'Price: £999'
+      'Price: £800'
     ],
     image: greenDoor,
   },
@@ -50,7 +50,7 @@ const packages = [
       'Daily Breakfast Included',
       'All Transport & Ziyarat Arranged',
       'Assistance from Local Guides',
-      'Price: £1049'
+      'Price: £1000'
     ],
     image: haramNight,
   },
@@ -66,7 +66,7 @@ const packages = [
       'Daily Breakfast Included',
       'All Transport & Ziyarat Arranged',
       'Assistance from Local Guides',
-      'Price: £1149'
+      'Price: £1103'
     ],
     image: masjidFront,
   },
