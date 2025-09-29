@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser'; // Add this
+import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,29 +9,8 @@ const Contact = () => {
     message: '',
   });
 
-  const formRef = useRef(); // Add this
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      'send',     // Replace with your EmailJS service ID
-      'template_g8o214k',    // Replace with your EmailJS template ID
-      formRef.current,
-      'lBXU1-S7r1VIvmQvJ'      // Replace with your EmailJS public key
-    )
-    .then((result) => {
-      alert('Message sent successfully!');
-      setFormData({ fullName: '', email: '', contactNo: '', message: '' });
-    })
-    .catch((error) => {
-      alert('Failed to send message.');
-      console.error(error);
-    });
   };
 
   return (
@@ -42,7 +20,12 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-form">
           <h3>Drop Message</h3>
-          <form onSubmit={handleSubmit} ref={formRef}>
+
+          {/* Formspree integration */}
+          <form
+            action="https://formspree.io/f/meorarlg"
+            method="POST"
+          >
             <input
               type="text"
               name="fullName"
