@@ -142,7 +142,8 @@
   }
 
   .price {
+    width:80%;
     font-size: 1rem; /* price ka font size adjust */
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
 }
