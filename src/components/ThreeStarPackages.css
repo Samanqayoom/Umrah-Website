@@ -135,12 +135,7 @@
   .call-btn,
   .whatsapp-btn 
   .price{
-     width: 90%;   /* ✅ sab equal width */
-    justify-content: center;
-    font-size: 1rem;
-    padding: 0.6rem;
-    display: flex; /* ✅ center text properly */
-    align-items: center;
+     width: 100%;
   }
 
   .stars {
