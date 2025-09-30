@@ -16,18 +16,24 @@
 .logo {
   display: flex;
   align-items: center;
+  gap: 0; /* flex gap ko bhi 0 kar diya */
 }
 
 .logo-img {
-  width: 40px;
-  height: auto;
-  margin-right: 8px;
+  margin-right: 2px; /* gap hata diya */
+  width: 55px;
+  height: 55px;       /* ek fixed height & width set karo */
+  object-fit: cover;   /* image ko crop karega */
+  margin-top: 0;
+  
 }
 
+
 .logo-text {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   color: #fff; /* ya apni theme ke hisaab se */
+  margin-top: 12px; /* yahan value adjust karke neeche lao */
 }
 
 
@@ -40,7 +46,7 @@
 .contact-info span {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.2rem;
   font-size: 1rem;
 }
 
@@ -48,6 +54,10 @@
 .contact-info i {
   margin-right: 6px;
   vertical-align: middle;
+}
+.contact-info .fa-whatsapp{
+  color:white;
+  font-size: bold;
 }
 
 .contact-info .fa-phone-alt {

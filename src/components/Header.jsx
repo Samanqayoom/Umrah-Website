@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import { useNavigate } from 'react-router-dom';
-import logoImg from '../assets/pn.png';
+import logoImg from '../assets/chat.png';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const Header = () => {
       <div className="top-bar">
        <div className="logo">
   <img src={logoImg} alt="Muqqadas Travels Logo" className="logo-img" />
-  <span className="logo-text">🕋Muqqadas Travels🕌</span>
+  <span className="logo-text">Muqqadas Travels</span>
 </div>
 
 
