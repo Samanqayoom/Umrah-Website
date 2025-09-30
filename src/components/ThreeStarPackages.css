@@ -134,7 +134,7 @@
 
   .call-btn,
   .whatsapp-btn {
-    width: 80%; /* buttons full width on mobile */
+    width: 90%; /* buttons full width on mobile */
     justify-content: center;
   }
 
@@ -143,10 +143,10 @@
   }
 
   .price {
-     width: 100%; /* buttons full width on mobile */
+    width: 90%; /* buttons full width on mobile */
     justify-content: center;
     font-size: 1rem; /* price ka size adjust */
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
 }
 
