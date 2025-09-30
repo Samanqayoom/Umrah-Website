@@ -133,20 +133,19 @@
   }
 
   .call-btn,
-  .whatsapp-btn {
-    width: 80%; /* buttons full width on mobile */
+  .whatsapp-btn 
+  .price{
+     width: 90%;   /* ✅ sab equal width */
     justify-content: center;
+    font-size: 1rem;
+    padding: 0.6rem;
+    display: flex; /* ✅ center text properly */
+    align-items: center;
   }
 
   .stars {
     font-size: 1rem; /* thoda chota stars ka size */
   }
 
-  .price {
-    width: 95%; /* buttons full width on mobile */
-    justify-content: center;
-    font-size: 1rem; /* price ka size adjust */
-    padding: 0.4rem;
-  }
 }
 

@@ -64,14 +64,14 @@ const FourStarPackages = () => {
             
             <div className="hotel-info">
               <div>
-                <img src="/makkah-icon.png" alt="Makkah" />
+               
                 <p>
                   <i className="fa-solid fa-kaaba"></i> Makkah ({pkg.makkahNights})
                 </p>
                 <span>{pkg.makkahHotel}</span>
               </div>
               <div>
-                <img src="/madinah-icon.png" alt="Madinah" />
+                
                 <p>
                   <i className="fa-solid fa-mosque"></i> Madinah ({pkg.madinahNights})
                 </p>
