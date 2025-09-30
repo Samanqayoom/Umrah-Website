@@ -128,28 +128,35 @@
   .stars {
     font-size: 1rem; /* thoda chota star size */
   }
-
-  /* ✅ Mobile me sab ek jese dikhen */
-  .price,
-  .call-btn,
-  .whatsapp-btn {
-    width: 100%;
+.price {
+    display: block;
+    width: 100% !important;
     font-size: 1rem;
     padding: 0.7rem;
+    text-align: center;
     margin-top: 0.5rem;
     border-radius: 5px;
-    text-align: center;
-    display: block;
   }
 
   .contact-buttons {
-    flex-direction: column;
+    flex-direction: column !important;
+    align-items: stretch !important; /* ✅ full width force karega */
     width: 100%;
     gap: 0.5rem;
     margin-top: 0.5rem;
   }
-}
 
+  .call-btn,
+  .whatsapp-btn {
+    display: block !important;  /* ✅ inline-flex hata diya */
+    width: 100% !important;     /* ✅ price ke barabar */
+    font-size: 1rem;
+    padding: 0.7rem;
+    text-align: center;
+    margin: 0; /* default margin remove */
+    border-radius: 5px;
+  }
+}
 @media (max-width: 480px) {
   .package-card {
     width: 100%;
