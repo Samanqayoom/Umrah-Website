@@ -135,7 +135,7 @@
   .call-btn,
   .whatsapp-btn 
   .price{
-     width: 100%;
+     width: 100% !important;
   }
 
   .stars {
