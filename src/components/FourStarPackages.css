@@ -149,7 +149,7 @@
   .call-btn,
   .whatsapp-btn {
     display: block !important;  /* ✅ inline-flex hata diya */
-    width: 100% !important;     /* ✅ price ke barabar */
+    width: 95% !important;     /* ✅ price ke barabar */
     font-size: 1rem;
     padding: 0.7rem;
     text-align: center;
