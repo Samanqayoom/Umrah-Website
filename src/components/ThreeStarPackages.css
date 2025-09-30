@@ -61,7 +61,7 @@
 
 .price {
   background: #333;
-  color: rgb(255, 255, 255);
+   color: white !important;
   font-weight: bold;
   padding: 0.7rem;
   margin-top: 1rem;

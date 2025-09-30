@@ -14,9 +14,22 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
+
+.logo-img {
+  width: 40px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* ya apni theme ke hisaab se */
+}
+
 
 .contact-info {
   display: flex;

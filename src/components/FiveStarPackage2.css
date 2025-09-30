@@ -12,7 +12,7 @@
 
 .package-row {
   display: flex;
-  flex-direction: row-reverse; /* image left side pe aa jayegi */
+  flex-direction: row ; /* image left side pe aa jayegi */
   align-items: center;
   justify-content: space-between;
   gap: 2rem;

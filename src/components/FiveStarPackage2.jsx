@@ -91,6 +91,9 @@ const FiveStarPackage2= () => {
       <div className="package-list">
         {packages.map(pkg => (
           <div className="package-row" key={pkg.id}>
+              <div className="package-image">
+              <img src={pkg.image} alt={pkg.title} />
+            </div>
             <div className="package-details">
               <h3>{pkg.title}</h3>
               <ul>
@@ -118,9 +121,7 @@ const FiveStarPackage2= () => {
                 </a>
               </div>
             </div>
-            <div className="package-image">
-              <img src={pkg.image} alt={pkg.title} />
-            </div>
+          
           </div>
         ))}
       </div>

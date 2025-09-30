@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import { useNavigate } from 'react-router-dom';
+import logoImg from '../assets/pn.png';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -15,14 +16,17 @@ const Header = () => {
   return (
     <header className="header">
       <div className="top-bar">
-        <div className="logo">
-          <i className="fas fa-kaaba"></i> Muqqadas Travels
-        </div>
+       <div className="logo">
+  <img src={logoImg} alt="Muqqadas Travels Logo" className="logo-img" />
+  <span className="logo-text">🕋Muqqadas Travels🕌</span>
+</div>
+
+
 
         {/* Contact info hidden on mobile */}
         <div className="contact-info">
           <span>
-            <i className="fas fa-phone-alt"></i>+44 020 38219 282
+            <i className="fas fa-phone-alt"></i>+44 02038219282
           </span>
           <span>
             <i className="fa-brands fa-whatsapp"></i>+44 7465683556

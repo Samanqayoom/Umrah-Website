@@ -61,7 +61,7 @@
 
 .price {
   background: #333;
-  color: rgb(255, 255, 255);
+  color: white !important;
   font-weight: bold;
   padding: 0.7rem;
   margin-top: 1rem;
@@ -132,7 +132,7 @@
 
   .call-btn,
   .whatsapp-btn {
-    width: 90%; /* buttons mobile pe full width */
+    width: 80%; /* buttons mobile pe full width */
     justify-content: center;
   }
 
@@ -142,7 +142,7 @@
 
   .price {
     font-size: 1rem; /* price ka font size adjust */
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
 }
 
