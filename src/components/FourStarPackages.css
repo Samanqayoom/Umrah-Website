@@ -107,7 +107,6 @@
   font-size: 1.2rem;
   margin-top: 0.5rem;
 }
-
 /* Mobile Responsive for Three Star Packages */
 @media (max-width: 768px) {
   .package-grid {
@@ -126,24 +125,44 @@
     gap: 0.5rem;
   }
 
-  .contact-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .call-btn,
-  .whatsapp-btn {
-    width: 80%; /* buttons mobile pe full width */
-    justify-content: center;
-  }
-
   .stars {
     font-size: 1rem; /* thoda chota star size */
   }
 
-  .price {
-    
-    font-size: 1rem; /* price ka font size adjust */
-    padding: 0.4rem;
+  /* ✅ Mobile me sab ek jese dikhen */
+  .price,
+  .call-btn,
+  .whatsapp-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .package-card {
+    width: 100%;
+  }
+
+  .stars {
+    font-size: 0.9rem;
+  }
+
+  .price,
+  .call-btn,
+  .whatsapp-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
   }
 }
