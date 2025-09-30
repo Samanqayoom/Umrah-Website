@@ -22,10 +22,10 @@ const Header = () => {
         {/* Contact info hidden on mobile */}
         <div className="contact-info">
           <span>
-            <i className="fas fa-phone-alt"></i> 020 38219 282
+            <i className="fas fa-phone-alt"></i>+44 020 38219 282
           </span>
           <span>
-            <i className="fas fa-envelope"></i> umrah@muqaddastravels.com
+            <i className="fa-brands fa-whatsapp"></i>+44 7465683556
           </span>
         </div>
 

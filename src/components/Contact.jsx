@@ -9,23 +9,48 @@ const Contact = () => {
     message: '',
   });
 
+  const [showPopup, setShowPopup] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/meorarlg", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowPopup(true);
+        setFormData({ fullName: '', email: '', contactNo: '', message: '' });
+      } else {
+        alert("❌ Something went wrong. Please try again!");
+      }
+    } catch (error) {
+      alert("⚠️ Error: " + error.message);
+    }
+
+    setLoading(false);
+  };
+
   return (
     <section className="contact-page">
-      <h2 className="contact-heading">Contact <span>Us</span></h2>
+      <h2 className="contact-heading">
+        Contact <span>Us</span>
+      </h2>
 
       <div className="contact-container">
         <div className="contact-form">
           <h3>Drop Message</h3>
 
-          {/* Formspree integration */}
-          <form
-            action="https://formspree.io/f/meorarlg"
-            method="POST"
-          >
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
               name="fullName"
@@ -58,10 +83,27 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
             ></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
           </form>
         </div>
       </div>
+
+      {/* ✅ Stylish Popup Modal */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-box">
+            <i className="fa-solid fa-circle-check success-icon"></i>
+            <h3>Message Sent Successfully</h3>
+            <p>
+              Thank you for reaching out to us. <br />
+              Our team will review your message and get back to you shortly.
+            </p>
+            <button onClick={() => setShowPopup(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

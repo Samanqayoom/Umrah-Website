@@ -134,7 +134,7 @@
 
   .call-btn,
   .whatsapp-btn {
-    width: 90%; /* buttons full width on mobile */
+    width: 80%; /* buttons full width on mobile */
     justify-content: center;
   }
 

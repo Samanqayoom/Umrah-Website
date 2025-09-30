@@ -11,17 +11,17 @@ const packages = [
     title: '5 Star Umrah Package - 7 Nights',
     description: [
       'Total Stay: 7 Nights',
-      'Makkah: 4 Nights at Emaar Al Khalil Hotel(Walking Distance from Haram)',
-      'Madinah: 3 Nights at Zaha Al Madinah Hotel(Close to Masjid an-Nabawi',
-       'Spacious Luxury Suites with Elegant Interior',
-    'King Size Beds with Premium Bedding',
-    'Attached Bathroom with High-End Amenities',
-    'Air Conditioning & Modern Furniture',
-    'Daily Breakfast Buffet with Multiple Cuisines',
-    'Private Luxury Transport for Airport Transfers & Ziyarat',
-    '24/7 Concierge & Assistance from Experienced Local Guides',
-    'Personalized Ziyarat Tours (Historical & Religious Sites)',
-    'Dedicated Customer Support Throughout the Journey',
+      'Makkah: 4 Nights at Emaar Al Khalil Hotel (Walking Distance from Haram)',
+      'Madinah: 3 Nights at Zaha Al Madinah Hotel (Close to Masjid an-Nabawi)',
+      'Spacious Luxury Suites with Elegant Interior',
+      'King Size Beds with Premium Bedding',
+      'Attached Bathroom with High-End Amenities',
+      'Air Conditioning & Modern Furniture',
+      'Daily Breakfast Buffet with Multiple Cuisines',
+      'Private Luxury Transport for Airport Transfers & Ziyarat',
+      '24/7 Concierge & Assistance from Experienced Local Guides',
+      'Personalized Ziyarat Tours (Historical & Religious Sites)',
+      'Dedicated Customer Support Throughout the Journey',
       'Price: £960'
     ],
     image: kabah,
@@ -60,7 +60,7 @@ const packages = [
       'In-Room Dining & Complimentary Refreshments',
       'Daily Breakfast Buffet with Continental & Arabic Cuisine',
       'Personal Assistance from Professional Local Guides',
-       'Private A/C Luxury Vehicles for Ziyarat & Transfers',
+      'Private A/C Luxury Vehicles for Ziyarat & Transfers',
       '24/7 Multilingual Travel Guides',
       'Complimentary Welcome Pack & Refreshments',
       'VIP Assistance for Group & Individual Needs',
@@ -81,7 +81,7 @@ const packages = [
       'Attached Bathroom with Rain Shower & Luxury Amenities',
       'Complimentary WiFi, Smart Entertainment System',
       'Daily International Buffet Breakfast & Room Dining',
-       'Full VIP Transport Service for All Transfers & Ziyarat',
+      'Full VIP Transport Service for All Transfers & Ziyarat',
       'Personalized Itinerary with Guided Ziyarat',
       '24/7 Dedicated Concierge & Customer Support',
       'Special Care & Assistance for Families & Elderly Pilgrims',
@@ -110,13 +110,14 @@ const FiveStarPackage1 = () => {
                   </li>
                 ))}
               </ul>
-           
+
+              {/* ✅ Contact Buttons with Correct Links */}
               <div className="contact-buttons">
-                <a href="tel:07465683556" className="call-btn">
+                <a href="tel:+44 02038219282" className="call-btn">
                   <i className="fa-solid fa-phone"></i> Call Us
                 </a>
                 <a
-                  href="https://wa.me/07465683556"
+                  href="https://wa.me/447465683556"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-btn"

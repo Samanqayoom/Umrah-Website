@@ -132,7 +132,7 @@
 
   .call-btn,
   .whatsapp-btn {
-    width: 100%; /* buttons mobile pe full width */
+    width: 80%; /* buttons mobile pe full width */
     justify-content: center;
   }
 

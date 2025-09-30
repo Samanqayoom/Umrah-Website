@@ -93,11 +93,11 @@ const FiveStarPackage3 = () => {
               </ul>
             
               <div className="contact-buttons">
-                <a href="tel:07465683556" className="call-btn">
+                <a href="tel:+44 02038219282" className="call-btn">
                   <i className="fa-solid fa-phone"></i> Call Us
                 </a>
                 <a
-                  href="https://wa.me/07465683556"
+                  href="https://wa.me/447465683556"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-btn"
