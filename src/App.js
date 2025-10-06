@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import ThreeStarPackages from './components/ThreeStarPackages';
 import FourStarPackages from './components/FourStarPackages';
 import FiveStarPackages from './components/FiveStarPackages';
-import UmrahDescription from './components/UmrahDescription';
+
 import { Routes, Route } from 'react-router-dom';
 import Contact from './components/Contact';
 import Services from "./components/Services";

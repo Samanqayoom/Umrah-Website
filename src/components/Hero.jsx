@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import poster from '../assets/5ss.png';
+import poster from '../assets/5STAR.png';
 
 const Hero = () => (
   <section className="hero-section">

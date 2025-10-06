@@ -7,28 +7,29 @@ const AboutUs = () => {
     <div className="about-us-page">
       <div className="about-content">
         <h1>
-          About <span className="highlight">Muqqadas Travels</span>
+          About <span className="highlight">Muqaddas Travels</span>
         </h1>
         <p className="intro">
-          Muqqadas Travels is committed to providing exceptional Umrah services with integrity,
-          comfort, and spiritual focus. Our mission is to assist our clients in fulfilling
-          their religious duties with peace of mind.
+          Muqaddas Travels is dedicated to providing exceptional Umrah and Hajj services with integrity, comfort, and a strong spiritual focus. Our mission is to ensure that every pilgrim can fulfill their sacred duties with complete peace of mind, while we take care of all the details.
         </p>
 
         <section>
           <h2><i className="fas fa-star vision-icon"></i> Our Vision</h2>
-          <p>To be the most trusted travel partner for Umrah and Hajj journeys in the UK.</p>
+          <p>To become the most trusted and reliable travel partner for Umrah and Hajj journeys in the UK, known for excellence, transparency, and care.</p>
         </section>
 
         <section>
           <h2><i className="fas fa-handshake why-icon"></i> Why Choose Us?</h2>
           <ul className="features-list">
-            <li><i className="fas fa-user-tie staff"></i> Experienced and professional staff</li>
-            <li><i className="fas fa-money-bill-wave price"></i> Affordable and flexible packages</li>
-            <li><i className="fas fa-phone-alt support"></i> 24/7 customer support</li>
-            <li><i className="fas fa-mosque mosque"></i> Trusted by thousands of pilgrims</li>
+           <li><i className="fas fa-user-tie staff"></i> Experienced and professional staff with deep knowledge of Hajj & Umrah rituals</li>
+            <li><i className="fas fa-money-bill-wave price"></i> Affordable, flexible, and tailor-made packages for every budget</li> 
+            <li><i className="fas fa-phone-alt support"></i> 24/7 dedicated customer support to guide you at every step</li> 
+            <li><i className="fas fa-mosque mosque"></i> Trusted by thousands of satisfied pilgrims who recommend us with pride</li>
+             <li><i className="fas fa-heart comfort"></i> Focus on comfort, convenience, and a spiritually uplifting experience</li>
+              <li><i className="fas fa-check-circle trust"></i> A promise of reliability, integrity, and personalized attention</li>
           </ul>
         </section>
+        <section className="closing-note"> <p> At Muqaddas Travels, we believe your sacred journey deserves nothing less than the best. From booking to your safe return, we stand by your side — so you can focus entirely on worship, reflection, and spiritual connection. </p> </section>
       </div>
     </div>
   );

@@ -1,9 +1,15 @@
-/* Header & Top bar */
+
 .header {
+  position: fixed;
+  top: 0;          
+  left: 0;
+  width: 100%;     
+  z-index: 999;
   background: #60afbb;
-  color: white;
-  position: relative;
-  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+body {
+  padding-top: 150px; 
 }
 
 .top-bar {
@@ -16,15 +22,15 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0; /* flex gap ko bhi 0 kar diya */
+  gap: 0; 
 }
 
 .logo-img {
-  margin-right: 2px; /* gap hata diya */
-  width: 55px;
-  height: 55px;       /* ek fixed height & width set karo */
-  object-fit: cover;   /* image ko crop karega */
-  margin-top: 0;
+  margin-right: 2px; 
+  width: 50px;
+  height: 50px;       
+  object-fit: cover;   
+  margin-top: 0px;
   
 }
 
@@ -32,39 +38,40 @@
 .logo-text {
   font-size: 17px;
   font-weight: bold;
-  color: #fff; /* ya apni theme ke hisaab se */
-  margin-top: 16px; /* yahan value adjust karke neeche lao */
+  color: #fff;
+  margin-top: 15px; 
 }
 
 
-.contact-info {
+
+.contact-info{
   display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.call-btn,
+.whatsapp-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 6px; /* icon aur text ke beech space */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.contact-info span {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  font-size: 1rem;
+.call-btn {
+  background-color:#333;
 }
 
-.logo i,
-.contact-info i {
-  margin-right: 6px;
-  vertical-align: middle;
-}
-.contact-info .fa-whatsapp{
-  color:white;
-  font-size: bold;
+.whatsapp-btn {
+  background-color: #25D366;
 }
 
-.contact-info .fa-phone-alt {
-  transform: rotate(90deg);
-}
-
-/* Desktop Navbar */
 .navbar {
   display: flex;
   justify-content: center;

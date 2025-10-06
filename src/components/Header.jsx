@@ -25,12 +25,17 @@ const Header = () => {
 
         {/* Contact info hidden on mobile */}
         <div className="contact-info">
-          <span>
-            <i className="fas fa-phone-alt"></i>+44 02038219282
-          </span>
-          <span>
-            <i className="fa-brands fa-whatsapp"></i>+44 7465683556
-          </span>
+         <a href="tel:+44 02038219282" className="call-btn">
+                <i className="fa-solid fa-phone"></i> Call Us
+              </a>
+              <a
+                href="https://wa.me/447465683556"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-btn"
+              >
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
         </div>
 
         {/* Mobile burger */}
