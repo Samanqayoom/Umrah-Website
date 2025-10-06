@@ -1,4 +1,6 @@
+// src/pages/FourStarPackages.jsx
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './FourStarPackages.css';
 import kabah from '../assets/summer.jpg';
 import greenDoor from '../assets/mecca.jpg';
@@ -55,23 +57,45 @@ const packages = [
 const FourStarPackages = () => {
   return (
     <section className="three-star-section">
+      {/* ✅ Meta Tags for SEO */}
+      <Helmet>
+        <title>4 Star Umrah Packages - Muqaddas Travels UK</title>
+        <meta
+          name="description"
+          content="Discover our premium 4 Star Umrah packages from the UK with comfortable hotels in Makkah & Madinah, guided Ziyarat, transport, and full support."
+        />
+        <meta
+          name="keywords"
+          content="4 Star Umrah Packages UK, Luxury Umrah Packages, Umrah from London, Muqaddas Travels"
+        />
+        <meta name="author" content="Muqaddas Travels" />
+        <meta property="og:title" content="4 Star Umrah Packages - Muqaddas Travels" />
+        <meta
+          property="og:description"
+          content="Book your 4 Star Umrah package with Muqaddas Travels. Comfortable hotels, guided Ziyarat, transport, and complete support for a smooth journey."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.muqaddastravels.co.uk/packages/4star"
+        />
+      </Helmet>
+
       <h2>4 Star Umrah Packages</h2>
       <div className="package-grid">
         {packages.map((pkg) => (
           <div className="package-card" key={pkg.id}>
-            <img src={pkg.image} alt={pkg.nights} />
+            <img src={pkg.image} alt={`${pkg.nights} ${pkg.star}`} />
             <h3>{pkg.nights} {pkg.star} Umrah Package</h3>
             
             <div className="hotel-info">
               <div>
-               
                 <p>
                   <i className="fa-solid fa-kaaba"></i> Makkah ({pkg.makkahNights})
                 </p>
                 <span>{pkg.makkahHotel}</span>
               </div>
               <div>
-                
                 <p>
                   <i className="fa-solid fa-mosque"></i> Madinah ({pkg.madinahNights})
                 </p>

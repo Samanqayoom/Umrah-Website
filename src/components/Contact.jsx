@@ -1,4 +1,6 @@
+// src/pages/Contact.jsx
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import './Contact.css';
 
 const Contact = () => {
@@ -42,6 +44,27 @@ const Contact = () => {
 
   return (
     <section className="contact-page">
+      <Helmet>
+        <title>Contact Us - Muqaddas Travels</title>
+        <meta
+          name="description"
+          content="Get in touch with Muqaddas Travels for Umrah and Hajj packages. Contact us today for inquiries, bookings, or support. We are here to help you 24/7."
+        />
+        <meta
+          name="keywords"
+          content="Contact Muqaddas Travels, Umrah booking UK, Hajj packages UK, Umrah inquiries, travel support"
+        />
+        <meta name="author" content="Muqaddas Travels" />
+        <meta property="og:title" content="Contact Us - Muqaddas Travels" />
+        <meta
+          property="og:description"
+          content="Reach out to Muqaddas Travels for all your Hajj and Umrah travel needs. Our team is ready to assist you with packages, bookings, and support."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.muqaddastravels.com/contact" />
+        <meta property="og:image" content="https://www.muqaddastravels.com/og-image.jpg" />
+      </Helmet>
+
       <h2 className="contact-heading">
         Contact <span>Us</span>
       </h2>

@@ -1,4 +1,6 @@
+// src/components/Services.jsx
 import React from "react";
+import { Helmet } from "react-helmet";
 import "./Services.css";
 
 const servicesData = [
@@ -31,6 +33,30 @@ const servicesData = [
 const Services = () => {
   return (
     <section className="services-section">
+      {/* ✅ Meta Tags */}
+      <Helmet>
+        <title>Our Umrah Travel Services - Muqaddas Travels UK</title>
+        <meta
+          name="description"
+          content="Muqaddas Travels provides top-notch Umrah services including health support, transport, visa assistance, and guided Ziyarat tours for a smooth journey."
+        />
+        <meta
+          name="keywords"
+          content="Umrah Services UK, Health Services, Transport Services, Visa Assistance, Ziyarat Tours, Muqaddas Travels"
+        />
+        <meta name="author" content="Muqaddas Travels" />
+        <meta property="og:title" content="Our Umrah Travel Services - Muqaddas Travels" />
+        <meta
+          property="og:description"
+          content="Experience seamless Umrah travel with Muqaddas Travels: Health support, transport, visa assistance, and guided Ziyarat tours."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.muqaddastravels.co.uk/#services"
+        />
+      </Helmet>
+
       <h2>Our Services</h2>
       <p className="intro">
         As one of the credible Umrah Travel Agencies in the region, we hold a

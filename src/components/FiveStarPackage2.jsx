@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './FiveStarPackage2.css';
 import kabah from '../assets/بفخامة الإقامة، تسطر قصة ملهمة ترويها لأجيال ممتدة….jpg';
 import greenDoor from '../assets/رحلة عمرة تمنحك سكينةً وسلامًا لا ينقطعان برؤية….jpg';
@@ -87,6 +88,51 @@ const packages = [
 const FiveStarPackage2= () => {
   return (
     <section className="five-star-section">
+      <Helmet>
+        {/* 🔹 Basic SEO */}
+        <title>5 Star Umrah Packages UK - Luxury Umrah with Muqaddas Travels</title>
+        <meta
+          name="description"
+          content="Book premium 5 Star Umrah Packages from the UK with Muqaddas Travels. Stay in 5-star hotels near Haram in Makkah & Madinah, VIP transport, daily breakfast & guided Ziyarat."
+        />
+        <meta
+          name="keywords"
+          content="5 Star Umrah Packages UK, Luxury Umrah Packages 2025, VIP Umrah UK, Best Umrah Agency London, Umrah Travel UK"
+        />
+        <meta name="author" content="Muqaddas Travels" />
+
+        {/* 🔹 Open Graph (Facebook / WhatsApp) */}
+        <meta property="og:title" content="5 Star Umrah Packages UK - Muqaddas Travels" />
+        <meta
+          property="og:description"
+          content="Discover luxury 5 Star Umrah Packages with premium hotels, VIP transport, guided Ziyarat tours & 24/7 support. Perfect for families & groups."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.muqaddastravels.co.uk/packages/5star"
+        />
+        <meta
+          property="og:image"
+          content="https://www.muqaddastravels.co.uk/og-images/5star.jpg"
+        />
+
+        {/* 🔹 Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="5 Star Umrah Packages UK - Muqaddas Travels"
+        />
+        <meta
+          name="twitter:description"
+          content="Book luxury 5 Star Umrah Packages from the UK. Hotels near Haram, VIP transfers, guided Ziyarat & more."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.muqaddastravels.co.uk/og-images/5star.jpg"
+        />
+      </Helmet>
+
       <h2>4 Star Umrah Packages</h2>
       <div className="package-list">
         {packages.map(pkg => (

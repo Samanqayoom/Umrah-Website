@@ -1,4 +1,6 @@
+// src/pages/ThreeStarPackages.jsx
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './ThreeStarPackages.css';
 import kabah from '../assets/4.jpg';
 import greenDoor from '../assets/madina.jpg';
@@ -55,11 +57,35 @@ const packages = [
 const ThreeStarPackages = () => {
   return (
     <section className="three-star-section">
+      {/* ✅ Meta Tags for SEO */}
+      <Helmet>
+        <title>3 Star Umrah Packages - Muqaddas Travels UK</title>
+        <meta
+          name="description"
+          content="Check our affordable 3 Star Umrah packages from the UK with stays in Makkah & Madinah, guided Ziyarat, transport, and full support."
+        />
+        <meta
+          name="keywords"
+          content="3 Star Umrah Packages UK, Affordable Umrah Packages, Umrah from London, Muqaddas Travels"
+        />
+        <meta name="author" content="Muqaddas Travels" />
+        <meta property="og:title" content="3 Star Umrah Packages - Muqaddas Travels" />
+        <meta
+          property="og:description"
+          content="Book your 3 Star Umrah package with Muqaddas Travels. Comfortable hotels, guided Ziyarat, transport, and full support for a smooth journey."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.muqaddastravels.co.uk/packages/3star"
+        />
+      </Helmet>
+
       <h2>3 Star Umrah Packages</h2>
       <div className="package-grid">
         {packages.map((pkg) => (
           <div className="package-card" key={pkg.id}>
-            <img src={pkg.image} alt={pkg.nights} />
+            <img src={pkg.image} alt={`${pkg.nights} ${pkg.star}`} />
             <h3>{pkg.nights} {pkg.star} Umrah Package</h3>
             
             <div className="hotel-info">
@@ -76,13 +102,12 @@ const ThreeStarPackages = () => {
             </div>
 
             <div className="stars">
-  <i className="fa-solid fa-star"></i>
-  <i className="fa-solid fa-star"></i>
-  <i className="fa-solid fa-star"></i>
-</div>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+            </div>
 
             <div className="price">{pkg.price}</div>
-            
             <p className="disclaimer">All packages are subject to availability.</p>
 
             <div className="contact-buttons">

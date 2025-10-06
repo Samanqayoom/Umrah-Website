@@ -1,4 +1,6 @@
+// src/pages/FiveStarPackage3.jsx
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './FiveStarPackage3.css';
 import kabah from '../assets/VmJ5v-tC.jpg';
 import greenDoor from '../assets/smJOZbHm.jpg';
@@ -75,6 +77,49 @@ const packages = [
 const FiveStarPackage3 = () => {
   return (
     <section className="five-star-section">
+      {/* ✅ SEO + Social Meta Tags */}
+      <Helmet>
+        {/* Basic SEO */}
+        <title>3 Star Umrah Packages UK - Affordable Umrah with Muqaddas Travels</title>
+        <meta
+          name="description"
+          content="Affordable 3 Star Umrah Packages from the UK. Stay in budget-friendly hotels in Makkah & Madinah, daily breakfast, transport & guided Ziyarat. Book with Muqaddas Travels."
+        />
+        <meta
+          name="keywords"
+          content="3 Star Umrah Packages UK, Budget Umrah Packages, Cheap Umrah UK, Affordable Umrah 2025, Best Umrah Agency UK"
+        />
+        <meta name="author" content="Muqaddas Travels" />
+
+        {/* Open Graph (Facebook / WhatsApp) */}
+        <meta property="og:title" content="3 Star Umrah Packages UK - Muqaddas Travels" />
+        <meta
+          property="og:description"
+          content="Book affordable 3 Star Umrah Packages with Muqaddas Travels. Includes hotels, breakfast, transport & guided Ziyarat. Perfect for families & groups."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.muqaddastravels.co.uk/packages/3star"
+        />
+        <meta
+          property="og:image"
+          content="https://www.muqaddastravels.co.uk/og-images/3star.jpg"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="3 Star Umrah Packages UK - Muqaddas Travels" />
+        <meta
+          name="twitter:description"
+          content="Affordable 3 Star Umrah Packages from UK with hotels, breakfast & guided Ziyarat. Book today with Muqaddas Travels."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.muqaddastravels.co.uk/og-images/3star.jpg"
+        />
+      </Helmet>
+
       <h2>3 Star Umrah Packages</h2>
       <div className="package-list">
         {packages.map(pkg => (
@@ -83,7 +128,6 @@ const FiveStarPackage3 = () => {
               <img src={pkg.image} alt={pkg.title} />
             </div>
             <div className="package-details">
-
               <h3>{pkg.title}</h3>
               <ul>
                 {pkg.description.map((item, index) => (
@@ -96,6 +140,7 @@ const FiveStarPackage3 = () => {
                 ))}
               </ul>
             
+              {/* ✅ Contact Buttons */}
               <div className="contact-buttons">
                 <a href="tel:+44 02038219282" className="call-btn">
                   <i className="fa-solid fa-phone"></i> Call Us
@@ -110,7 +155,6 @@ const FiveStarPackage3 = () => {
                 </a>
               </div>
             </div>
-           
           </div>
         ))}
       </div>
