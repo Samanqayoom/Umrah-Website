@@ -1,3 +1,11 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+# Block sensitive folders (if exist)
+
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+
+Sitemap: [https://www.muqaddastravels.co.uk/sitemap.xml](https://www.muqaddastravels.co.uk/sitemap.xml)
